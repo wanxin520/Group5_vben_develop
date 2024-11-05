@@ -1,0 +1,26 @@
+export default {
+  columns: [
+    { title: '序号', dataIndex: 'key' },
+    { title: '企业名称', dataIndex: 'companyName' },
+    { title: '租赁提成标准', dataIndex: 'rentalStandard' },
+    { title: '所属行业', dataIndex: 'industry' },
+    { title: '房号', dataIndex: 'roomNumber' },
+    { title: '签约时间', dataIndex: 'signTime' },
+    { title: '签约面积', dataIndex: 'signArea' },
+    { title: '签约单价', dataIndex: 'signPrice' },
+    { title: '合同起止时间', dataIndex: 'contractStartTime' },
+    { title: '首月租金', dataIndex: 'firstMonthRent' },
+    { title: '本次租金回款金额', dataIndex: 'totalRent' },
+    { title: '实际到账时间', dataIndex: 'actualReceiptTime' },
+    { title: '应收押金', dataIndex: 'newcline' },
+    { title: '实收押金', dataIndex: 'oldcline' },
+    { title: '招商人员', dataIndex: 'recruiter' },
+    { title: '应提成总额', dataIndex: 'totalReleasedAmount' },
+    { title: '已发放提成金额', dataIndex: 'totalReleasedAmount' },
+    {
+      title: '操作',
+      dataIndex: 'action',
+      slots: { customRender: 'action' },
+    },
+  ],
+};
