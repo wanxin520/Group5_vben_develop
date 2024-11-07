@@ -984,18 +984,29 @@
         <div v-if="Moneymsg">
           <div>
             <div class="w-80vw m-auto container smooth-scroll mt-[2vw]">
-              <div class="w-[14vw] flex justify-around">
-                <button
-                  class="border-seven w-[8vw] h-[2vw] text-blue-500"
-                  @click="insubject"
-                  id="btn"
+              <div class="w-[60vw] flex justify-around">
+                <button class="border-seven w-[8vw] h-[2vw] text-blue-500" @click="insubject"
                   >项目新增客户</button
+                >
+                <button class="border-seven w-[8vw] h-[2vw] ml-[1vw] text-blue-500" @click="inroom"
+                  >客户来源渠道</button
+                >
+                <button class="border-seven w-[8vw] h-[2vw] ml-[1vw] text-blue-500" @click="inwant"
+                  >客户意向级别</button
+                >
+                <button class="border-seven w-[8vw] h-[2vw] ml-[1vw] text-blue-500" @click="inwork"
+                  >行业成交客户数</button
+                >
+                <button class="border-seven w-[8vw] h-[2vw] ml-[1vw] text-blue-500" @click="inway"
+                  >渠道成交客户数</button
                 >
                 <button
                   class="border-seven w-[8vw] h-[2vw] ml-[1vw] text-blue-500"
-                  @click="inroom"
-                  id="btn1"
-                  >客户来源渠道</button
+                  @click="inaround"
+                  >客户成交周期</button
+                >
+                <button class="border-seven w-[8vw] h-[2vw] ml-[1vw] text-blue-500" @click="innew"
+                  >项目新增客户渠道</button
                 >
               </div>
               <vxe-table
@@ -1134,6 +1145,162 @@
                   <vxe-column field="num" title="抖音" />
                 </vxe-colgroup>
               </vxe-table>
+
+              <vxe-table
+                :data="tableData3"
+                class="w-[200vw] mt-[2vw]"
+                height="300"
+                v-if="want"
+                :show-footer="showFooter"
+                :footer-data="footerData"
+                header-align="center"
+                align="center"
+                id="table"
+              >
+                <vxe-column field="seq" width="50" />
+                <vxe-column field="mounth" title="" width="70" />
+                <vxe-column field="num" title="A类" />
+                <vxe-column field="num" title="B类" />
+                <vxe-column field="num" title="C类" />
+                <vxe-column field="num" title="D类" />
+                <vxe-column field="num" title="E类" />
+              </vxe-table>
+              <vxe-table
+                :data="tableData3"
+                class="w-[200vw] mt-[2vw]"
+                height="300"
+                v-if="work"
+                :show-footer="showFooter"
+                :footer-data="footerData"
+                header-align="center"
+                align="center"
+                id="table"
+              >
+                <vxe-column field="seq" width="50" />
+                <vxe-column field="mounth" title="" width="70" />
+                <vxe-column field="num" title="行业1" />
+                <vxe-column field="num" title="行业2" />
+                <vxe-column field="num" title="行业3" />
+                <vxe-column field="num" title="行业4" />
+                <vxe-column field="num" title="行业5" />
+                <vxe-column field="num" title="行业6" />
+                <vxe-column field="num" title="行业7" />
+                <vxe-column field="num" title="行业8" />
+                <vxe-column field="num" title="行业9" />
+                <vxe-column field="num" title="行业10" />
+              </vxe-table>
+              <vxe-table
+                :data="tableData3"
+                class="w-[200vw] mt-[2vw]"
+                height="300"
+                v-if="way"
+                :show-footer="showFooter"
+                :footer-data="footerData"
+                header-align="center"
+                align="center"
+                id="table"
+              >
+                <vxe-column field="seq" width="50" />
+                <vxe-column field="mounth" title="" width="70" />
+                <vxe-colgroup title="机构推荐">
+                  <vxe-column field="num" title="行业协会" />
+                  <vxe-column field="num" title="中介机构" />
+                </vxe-colgroup>
+                <vxe-colgroup title="广告宣传">
+                  <vxe-column field="num" title="电梯广告" />
+                  <vxe-column field="num" title="其他广告" />
+                </vxe-colgroup>
+                <vxe-colgroup title="网络来电">
+                  <vxe-column field="num" title="58同城平台推送" />
+                  <vxe-column field="num" title="58同城个人发帖" />
+                </vxe-colgroup>
+                <vxe-colgroup title="他人推荐">
+                  <vxe-column field="num" title="老业主推荐" />
+                  <vxe-column field="num" title="朋友推荐" />
+                </vxe-colgroup>
+                <vxe-colgroup title="自主拓客">
+                  <vxe-column field="num" title="call客" />
+                  <vxe-column field="num" title="陌拜" />
+                </vxe-colgroup>
+                <vxe-colgroup title="自然来访">
+                  <vxe-column field="num" title="路过" />
+                  <vxe-column field="num" title="其他" />
+                </vxe-colgroup>
+                <vxe-colgroup title="新媒体推广">
+                  <vxe-column field="num" title="园链" />
+                  <vxe-column field="num" title="抖音" />
+                </vxe-colgroup>
+              </vxe-table>
+              <vxe-table
+                :data="tableData3"
+                class="w-[120vw] mt-[2vw]"
+                height="300"
+                v-if="around"
+                header-align="center"
+                align="center"
+                id="table"
+              >
+                <vxe-column field="name" title="项目" />
+                <vxe-column field="num" title="1月成交量（组）" />
+                <vxe-column field="num" title="1月成交面积（㎡）" />
+                <vxe-colgroup title="1月成交面积（组）">
+                  <vxe-column field="num" title="500㎡以下" />
+                  <vxe-column field="num" title="500-1000（含500）" />
+                  <vxe-column field="num" title="1000-1500（含1000）" />
+                  <vxe-column field="num" title="1500-2000（含1500）" />
+                  <vxe-column field="num" title="2000-3000（含2000）" />
+                  <vxe-column field="num" title="3000及以上" />
+                </vxe-colgroup>
+                <vxe-column field="num" title="2月成交量（组）" />
+                <vxe-column field="num" title="2月成交面积（㎡）" />
+                <vxe-colgroup title="2月成交面积（组）">
+                  <vxe-column field="num" title="500㎡以下" />
+                  <vxe-column field="num" title="500-1000（含500）" />
+                  <vxe-column field="num" title="1000-1500（含1000）" />
+                  <vxe-column field="num" title="1500-2000（含1500）" />
+                  <vxe-column field="num" title="2000-3000（含2000）" />
+                  <vxe-column field="num" title="3000及以上" />
+                </vxe-colgroup>
+              </vxe-table>
+              <vxe-table
+                :data="tableData3"
+                class="w-[120vw] mt-[2vw]"
+                height="300"
+                v-if="news"
+                header-align="center"
+                align="center"
+                id="table"
+              >
+                <vxe-column field="name" title="项目" width="70" />
+                <vxe-colgroup title="机构推荐">
+                  <vxe-column field="num" title="行业协会" />
+                  <vxe-column field="num" title="中介机构" />
+                </vxe-colgroup>
+                <vxe-colgroup title="广告宣传">
+                  <vxe-column field="num" title="电梯广告" />
+                  <vxe-column field="num" title="其他广告" />
+                </vxe-colgroup>
+                <vxe-colgroup title="网络来电">
+                  <vxe-column field="num" title="58同城平台推送" />
+                  <vxe-column field="num" title="58同城个人发帖" />
+                </vxe-colgroup>
+                <vxe-colgroup title="他人推荐">
+                  <vxe-column field="num" title="老业主推荐" />
+                  <vxe-column field="num" title="朋友推荐" />
+                </vxe-colgroup>
+                <vxe-colgroup title="自主拓客">
+                  <vxe-column field="num" title="call客" />
+                  <vxe-column field="num" title="陌拜" />
+                </vxe-colgroup>
+                <vxe-colgroup title="自然来访">
+                  <vxe-column field="num" title="路过" />
+                  <vxe-column field="num" title="其他" />
+                </vxe-colgroup>
+                <vxe-colgroup title="新媒体推广">
+                  <vxe-column field="num" title="园链" />
+                  <vxe-column field="num" title="抖音" />
+                </vxe-colgroup>
+              </vxe-table>
             </div>
           </div>
         </div>
@@ -1163,6 +1330,11 @@
   const showEditPopup = ref(false);
   const loading = ref(false);
   const selectRow = ref();
+  const want = ref(false);
+  const way = ref(false);
+  const work = ref(false);
+  const news = ref(false);
+  const around = ref(false);
 
   const pageVO = reactive({
     total: 0,
@@ -1180,13 +1352,267 @@
   function insubject() {
     subject.value = true;
     room.value = false;
+    work.value = false;
+    news.value = false;
+    want.value = false;
+    around.value = false;
+    way.value = false;
   }
 
   function inroom() {
     subject.value = false;
     room.value = true;
+    work.value = false;
+    news.value = false;
+    want.value = false;
+    around.value = false;
+    way.value = false;
+  }
+  function inway() {
+    subject.value = false;
+    room.value = false;
+    work.value = false;
+    news.value = false;
+    want.value = false;
+    around.value = false;
+    way.value = true;
+  }
+  function inwork() {
+    subject.value = false;
+    room.value = false;
+    work.value = true;
+    news.value = false;
+    want.value = false;
+    around.value = false;
+    way.value = false;
+  }
+  function innew() {
+    subject.value = false;
+    room.value = false;
+    want.value = false;
+    around.value = false;
+    way.value = false;
+    news.value = true;
+  }
+  function inwant() {
+    subject.value = false;
+    room.value = false;
+    work.value = false;
+    news.value = false;
+    want.value = true;
+    around.value = false;
+    way.value = false;
+  }
+  function inaround() {
+    subject.value = false;
+    room.value = false;
+    work.value = false;
+    news.value = false;
+    want.value = false;
+    around.value = true;
+    way.value = false;
   }
 
+  const AllList = [
+    {
+      id: 10001,
+      name: 'Test1',
+      nickname: 'T1',
+      role: 'Develop',
+      sex: 'Man',
+      age: 28,
+      address: 'Shenzhen',
+    },
+    {
+      id: 10002,
+      name: 'Test2',
+      nickname: 'T2',
+      role: 'Test',
+      sex: 'Women',
+      age: 22,
+      address: 'Guangzhou',
+    },
+    {
+      id: 10003,
+      name: 'Test3',
+      nickname: 'T3',
+      role: 'PM',
+      sex: 'Man',
+      age: 32,
+      address: 'Shanghai',
+    },
+    {
+      id: 10004,
+      name: 'Test4',
+      nickname: 'T4',
+      role: 'Designer',
+      sex: 'Women',
+      age: 23,
+      address: 'test abc',
+    },
+    {
+      id: 10005,
+      name: 'Test5',
+      nickname: 'T5',
+      role: 'Develop',
+      sex: 'Women',
+      age: 30,
+      address: 'Shanghai',
+    },
+    {
+      id: 10006,
+      name: 'Test6',
+      nickname: 'T6',
+      role: 'Designer',
+      sex: 'Women',
+      age: 21,
+      address: 'Shenzhen',
+    },
+    {
+      id: 10007,
+      name: 'Test7',
+      nickname: 'T7',
+      role: 'Test',
+      sex: 'Man',
+      age: 29,
+      address: 'Shenzhen',
+    },
+    {
+      id: 10008,
+      name: 'Test8',
+      nickname: 'T8',
+      role: 'Develop',
+      sex: 'Man',
+      age: 35,
+      address: 'test abc',
+    },
+    {
+      id: 10009,
+      name: 'Test9',
+      nickname: 'T9',
+      role: 'Develop',
+      sex: 'Man',
+      age: 35,
+      address: 'Shenzhen',
+    },
+    {
+      id: 100010,
+      name: 'Test10',
+      nickname: 'T10',
+      role: 'Develop',
+      sex: 'Man',
+      age: 35,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100011,
+      name: 'Test11',
+      nickname: 'T11',
+      role: 'Develop',
+      sex: 'Man',
+      age: 49,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100012,
+      name: 'Test12',
+      nickname: 'T12',
+      role: 'Develop',
+      sex: 'Women',
+      age: 45,
+      address: 'Shanghai',
+    },
+    {
+      id: 100013,
+      name: 'Test13',
+      nickname: 'T13',
+      role: 'Test',
+      sex: 'Women',
+      age: 35,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100014,
+      name: 'Test14',
+      nickname: 'T14',
+      role: 'Test',
+      sex: 'Man',
+      age: 29,
+      address: 'Shanghai',
+    },
+    {
+      id: 100015,
+      name: 'Test15',
+      nickname: 'T15',
+      role: 'Develop',
+      sex: 'Man',
+      age: 39,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100016,
+      name: 'Test16',
+      nickname: 'T16',
+      role: 'Test',
+      sex: 'Women',
+      age: 35,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100017,
+      name: 'Test17',
+      nickname: 'T17',
+      role: 'Test',
+      sex: 'Man',
+      age: 39,
+      address: 'Shanghai',
+    },
+    {
+      id: 100018,
+      name: 'Test18',
+      nickname: 'T18',
+      role: 'Develop',
+      sex: 'Man',
+      age: 44,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100019,
+      name: 'Test19',
+      nickname: 'T19',
+      role: 'Develop',
+      sex: 'Man',
+      age: 39,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100020,
+      name: 'Test20',
+      nickname: 'T20',
+      role: 'Test',
+      sex: 'Women',
+      age: 35,
+      address: 'Guangzhou',
+    },
+    {
+      id: 100021,
+      name: 'Test21',
+      nickname: 'T21',
+      role: 'Test',
+      sex: 'Man',
+      age: 39,
+      address: 'Shanghai',
+    },
+    {
+      id: 100022,
+      name: 'Test22',
+      nickname: 'T22',
+      role: 'Develop',
+      sex: 'Man',
+      age: 44,
+      address: 'Guangzhou',
+    },
+  ];
   const tableData = ref([
     {
       id: 10001,
@@ -6017,13 +6443,10 @@
     background-color: blue;
     color: white;
   }
-  /* 显示滚动条 */
   .container {
     overflow-x: scroll;
     overflow-y: scroll;
   }
-
-  /* 平滑滚动 */
   .smooth-scroll {
     scroll-behavior: smooth;
   }
