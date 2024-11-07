@@ -14,6 +14,12 @@ import { setupStore } from '/@/store';
 import { setupGlobDirectives } from '/@/directives';
 import { setupI18n } from '/@/locales/setupI18n';
 import { registerGlobComp } from '/@/components/registerGlobComp';
+import 'vue-data-ui/style.css';
+import { VueUiRadar } from 'vue-data-ui';
+import VxeUI from 'vxe-pc-ui'
+import 'vxe-pc-ui/lib/style.css'
+import VxeUITable from 'vxe-table'
+import 'vxe-table/lib/style.css'
 
 // Importing on demand in local development will increase the number of browser requests by around 20%.
 // This may slow down the browser refresh speed.
@@ -52,8 +58,8 @@ async function bootstrap() {
 
   // https://next.router.vuejs.org/api/#isready
   // await router.isReady();
-
-  app.mount('#app');
+  app.component('VueUiRadar', VueUiRadar);
+  app.use(VxeUI).use(VxeUITable).mount('#app');
 }
 
 bootstrap();
