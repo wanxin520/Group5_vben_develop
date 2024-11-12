@@ -18,6 +18,11 @@ export default {
     { title: '应提成总额', dataIndex: 'totalReleasedAmount' },
     { title: '已发放提成金额', dataIndex: 'totalReleasedAmount' },
     {
+      title: '查看',
+      dataIndex: 'look',
+      slots: { customRender: 'look' },
+    },
+    {
       title: '操作',
       dataIndex: 'action',
       slots: { customRender: 'action' },
