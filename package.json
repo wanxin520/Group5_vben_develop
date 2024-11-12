@@ -36,6 +36,7 @@
     "@ant-design/colors": "^6.0.0",
     "@ant-design/icons-vue": "^6.0.1",
     "@iconify/iconify": "^2.0.4",
+    "@iconify/vue": "^4.1.2",
     "@vueuse/core": "^6.7.4",
     "@vueuse/shared": "^6.7.4",
     "@zxcvbn-ts/core": "^1.0.0-beta.0",
@@ -44,7 +45,6 @@
     "crypto-js": "^4.1.1",
     "echarts": "^5.2.2",
     "lodash-es": "^4.17.21",
-    "mockjs": "^1.1.0",
     "moment": "^2.29.1",
     "nprogress": "^0.2.0",
     "path-to-regexp": "^6.2.0",
@@ -55,6 +55,7 @@
     "sortablejs": "^1.14.0",
     "vue": "^3.2.21",
     "vue-i18n": "^9.1.9",
+    "vue-request": "^2.0.4",
     "vue-router": "^4.0.12",
     "vue-request": "^2.0.4",
     "vue-types": "^4.1.1",
@@ -105,6 +106,7 @@
     "jest": "^27.3.1",
     "less": "^4.1.2",
     "lint-staged": "11.2.6",
+    "mockjs": "^1.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.3.11",
     "postcss-html": "^1.2.0",
@@ -136,7 +138,6 @@
     "vue-tsc": "^0.28.10"
   },
   "resolutions": {
-    "//": "Used to install imagemin dependencies, because imagemin may not be installed in China. If it is abroad, you can delete it",
     "bin-wrapper": "npm:bin-wrapper-china",
     "rollup": "^2.56.3"
   },
