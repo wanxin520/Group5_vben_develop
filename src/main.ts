@@ -6,8 +6,10 @@ import 'virtual:windi-utilities.css';
 import 'virtual:svg-icons-register';
 import App from './App.vue';
 import { createApp } from 'vue';
+import '@opentiny/fluent-editor/style.css';
 import { initAppConfigStore } from '/@/logics/initAppConfig';
 import { setupErrorHandle } from '/@/logics/error-handle';
+import AntDesignVue from 'ant-design-vue';
 import { router, setupRouter } from '/@/router';
 import { setupRouterGuard } from '/@/router/guard';
 import { setupStore } from '/@/store';
@@ -24,6 +26,8 @@ if (import.meta.env.DEV) {
 
 async function bootstrap() {
   const app = createApp(App);
+ 
+  app.use(AntDesignVue);
 
   // Configure store
   setupStore(app);
