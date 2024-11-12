@@ -31,6 +31,14 @@ const dashboard: AppRouteModule = {
         title: t('routes.dashboard.workbench'),
       },
     },
+    {
+      path: 'data-analysis',
+      name: 'Data-analysis',
+      component: () => import('/@/views/dashboard/data-analysis/index.vue'),
+      meta: {
+        title: '数据分析',
+      },
+    },
   ],
 };
 
