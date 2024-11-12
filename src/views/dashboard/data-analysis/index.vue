@@ -96,31 +96,31 @@
 
         <div v-if="Moneymsg">
           <div class="w-80vw m-auto container smooth-scroll mt-[2vw]">
-            <vxe-table :data="tableData" class="w-[200vw]" height="400">
+            <vxe-table :data="tableData" class="w-[200vw]" height="400" alight-center>
               <vxe-column type="seq" width="70" />
-              <vxe-column field="name" title="项目名称" />
-              <vxe-column field="sex" title="分期" />
-              <vxe-column field="age" title="楼栋号" />
-              <vxe-column field="name" title="房间号" />
-              <vxe-column field="sex" title="合同甲方名称" />
-              <vxe-column field="age" title="合同编号" />
+              <vxe-column field="objname" title="项目名称" />
+              <vxe-column field="num" title="分期" />
+              <vxe-column field="num" title="楼栋号" />
+              <vxe-column field="num" title="房间号" />
+              <vxe-column field="name" title="合同甲方名称" />
+              <vxe-column field="number" title="合同编号" />
               <vxe-column field="name" title="客户名称" />
-              <vxe-column field="sex" title="签约日期" />
-              <vxe-column field="age" title="合同面积（㎡）" />
-              <vxe-column field="sex" title="租金单价（元/㎡/月）" />
-              <vxe-column field="age" title="租期（年）" />
-              <vxe-column field="name" title="合同起始日" />
-              <vxe-column field="sex" title="合同到期日" />
-              <vxe-column field="age" title="应收履约保证金时间" />
-              <vxe-column field="sex" title="应收履约保证金金额（元）" />
-              <vxe-column field="age" title="已收履约保证金时间" />
-              <vxe-column field="name" title="已收履约保证金金额（元）" />
-              <vxe-column field="sex" title="装修免租期（天）" />
-              <vxe-column field="age" title="合同应收租金总额（元）" />
-              <vxe-column field="age" title="租金税率" />
-              <vxe-column field="name" title="截止当前应收租金金额（元" />
-              <vxe-column field="sex" title="截止当前已收租金金额（元" />
-              <vxe-column field="age" title="截止当前欠缴租金金额（元）" />
+              <vxe-column field="past" title="签约日期" />
+              <vxe-column field="place" title="合同面积（㎡）" />
+              <vxe-column field="place" title="租金单价（元/㎡/月）" />
+              <vxe-column field="num" title="租期（年）" />
+              <vxe-column field="past" title="合同起始日" />
+              <vxe-column field="futer" title="合同到期日" />
+              <vxe-column field="futer" title="应收履约保证金时间" />
+              <vxe-column field="place" title="应收履约保证金金额（元）" />
+              <vxe-column field="money" title="已收履约保证金时间" />
+              <vxe-column field="money" title="已收履约保证金金额（元）" />
+              <vxe-column field="place" title="装修免租期（天）" />
+              <vxe-column field="place" title="合同应收租金总额（元）" />
+              <vxe-column field="persent" title="租金税率" />
+              <vxe-column field="money" title="截止当前应收租金金额（元" />
+              <vxe-column field="money" title="截止当前已收租金金额（元" />
+              <vxe-column field="money" title="截止当前欠缴租金金额（元）" />
             </vxe-table>
             <vxe-pager
               v-model:currentPage="pageVO.currentPage"
@@ -136,7 +136,7 @@
         class="absolute w-[90vw] h-[50vw] m-auto mt-[-51vw] ml-[2.5vw] bg-white border-two"
       >
         <div class="w-full bg-gray-100 h-[3vw] flex">
-          <p class="text-blue-500 ml-[1vw] mt-[0.5vw]">租赁台账</p>
+          <p class="text-blue-500 ml-[1vw] mt-[0.5vw]">欠租欠款</p>
           <p class="text-blue-500 ml-[82vw] mt-[0.2vw] text-[1.8vw]" @click="moneyoff">x</p>
         </div>
         <div class="w-full h-[4vw] border-three flex">
@@ -255,17 +255,17 @@
             >
               <vxe-column type="seq" width="70" />
               <vxe-column field="name" title="项目名称" />
-              <vxe-column field="sex" title="房间号" />
-              <vxe-column field="age" title="客户名称" />
-              <vxe-column field="name" title="合同面积（㎡）" />
-              <vxe-column field="sex" title="合同起始时间" />
-              <vxe-column field="age" title="合同到期日" />
-              <vxe-column field="name" title="押金（元）" />
-              <vxe-column field="name" title="应收租金（元）" />
-              <vxe-column field="name" title="实收租金（元）" />
-              <vxe-column field="name" title="拖欠租金（元）" />
+              <vxe-column field="num" title="房间号" />
+              <vxe-column field="name" title="客户名称" />
+              <vxe-column field="num" title="合同面积（㎡）" />
+              <vxe-column field="time" title="合同起始时间" />
+              <vxe-column field="time" title="合同到期日" />
+              <vxe-column field="num" title="押金（元）" />
+              <vxe-column field="num" title="应收租金（元）" />
+              <vxe-column field="num" title="实收租金（元）" />
+              <vxe-column field="num" title="拖欠租金（元）" />
               <vxe-column field="name" title="应回款节点" />
-              <vxe-column field="name" title="逾期天数" />
+              <vxe-column field="num" title="逾期天数" />
               <vxe-column
                 field="div"
                 title="催款进度"
@@ -379,24 +379,24 @@
               <vxe-column field="still" title="新增续租面积" />
               <vxe-column field="out" title="新增退租面积" />
             </vxe-table>
-            <vxe-table :data="tableData2" class="w-[200vw] mt-[2vw]" height="500" v-if="room">
+            <vxe-table :data="tableData" class="w-[200vw] mt-[2vw]" height="500" v-if="room">
               <vxe-column type="seq" width="70" />
-              <vxe-column field="name" title="项目名称" width="80" />
-              <vxe-column field="location" title="分期" />
-              <vxe-column field="lendpresent" title="楼栋" />
-              <vxe-column field="outpresent" title="层号" />
-              <vxe-column field="new" title="房号" />
-              <vxe-column field="still" title="实测面积（㎡）" />
-              <vxe-column field="out" title="可租面积（㎡）" />
-              <vxe-column field="outpresent" title="已租面积（㎡）" />
-              <vxe-column field="new" title="房源情况" />
-              <vxe-column field="still" title="客户名称" />
-              <vxe-column field="out" title="经营品牌（商业客户经营品牌" />
-              <vxe-column field="out" title="合同面积（㎡）" />
-              <vxe-column field="outpresent" title="签约日期" />
-              <vxe-column field="new" title="合同起始日" />
-              <vxe-column field="still" title="合同到期日" />
-              <vxe-column field="out" title="租期（年）" />
+              <vxe-column field="objname" title="项目名称" width="80" />
+              <vxe-column field="num" title="分期" />
+              <vxe-column field="num" title="楼栋" />
+              <vxe-column field="num" title="层号" />
+              <vxe-column field="num" title="房号" />
+              <vxe-column field="place" title="实测面积（㎡）" />
+              <vxe-column field="place" title="可租面积（㎡）" />
+              <vxe-column field="place" title="已租面积（㎡）" />
+              <vxe-column field="status" title="房源情况" />
+              <vxe-column field="name" title="客户名称" />
+              <vxe-column field="symbol" title="经营品牌（商业客户经营品牌" />
+              <vxe-column field="place" title="合同面积（㎡）" />
+              <vxe-column field="past" title="签约日期" />
+              <vxe-column field="past" title="合同起始日" />
+              <vxe-column field="futer" title="合同到期日" />
+              <vxe-column field="num" title="租期（年）" />
             </vxe-table>
             <vxe-pager
               v-model:currentPage="pageVO.currentPage"
@@ -412,7 +412,7 @@
         class="absolute w-[90vw] h-[50vw] m-auto mt-[-51vw] ml-[2.5vw] bg-white border-two"
       >
         <div class="w-full bg-gray-100 h-[3vw] flex">
-          <p class="text-blue-500 ml-[1vw] mt-[0.5vw]">财务台账</p>
+          <p class="text-blue-500 ml-[1vw] mt-[0.5vw]">招商数据报表</p>
           <p class="text-blue-500 ml-[82vw] mt-[0.2vw] text-[1.8vw]" @click="moneyoff">x</p>
         </div>
         <div class="w-full h-[4vw] border-three flex">
@@ -519,58 +519,59 @@
               >
             </div>
             <vxe-table
-              :data="tableData2"
-              class="w-[200vw] mt-[2vw]"
+              :data="tableData"
+              class="w-[200vw] mt-[2vw] mytable-style"
               height="400"
               v-if="subject"
               show-overflow
+              :header-cell-class-name="headerCellClassName"
             >
               <vxe-column type="seq" width="70" />
               <vxe-column field="name" title="项目名称" />
               <vxe-colgroup title="年度任务">
-                <vxe-column field="location" title="租赁面积（㎡）" />
-                <vxe-column field="lendpresent" title="出租率（租赁回款（万元）" />
+                <vxe-column field="place" title="租赁面积（㎡）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
               </vxe-colgroup>
               <vxe-colgroup title="年度完成情况/占比">
-                <vxe-column field="location" title="占比（%）" />
-                <vxe-column field="lendpresent" title="租赁回款（万元）" />
-                <vxe-column field="lendpresent" title="占比（%）" />
+                <vxe-column field="persent" title="占比（%）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
+                <vxe-column field="persent" title="占比（%）" />
               </vxe-colgroup>
               <vxe-colgroup title="一季度目标">
-                <vxe-column field="location" title="租赁面积（㎡）" />
-                <vxe-column field="lendpresent" title="出租率（租赁回款（万元）" />
+                <vxe-column field="place" title="租赁面积（㎡）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
               </vxe-colgroup>
               <vxe-colgroup title="一季度完成情况/占比">
-                <vxe-column field="location" title="占比（%）" />
-                <vxe-column field="lendpresent" title="租赁回款（万元）" />
-                <vxe-column field="lendpresent" title="占比（%）" />
+                <vxe-column field="persent" title="占比（%）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
+                <vxe-column field="persent" title="占比（%）" />
               </vxe-colgroup>
               <vxe-colgroup title="二季度目标">
-                <vxe-column field="location" title="租赁面积（㎡）" />
-                <vxe-column field="lendpresent" title="出租率（租赁回款（万元）" />
+                <vxe-column field="place" title="租赁面积（㎡）" />
+                <vxe-column field="persent" title="出租率（租赁回款（万元）" />
               </vxe-colgroup>
               <vxe-colgroup title="二季度完成情况/占比">
-                <vxe-column field="location" title="占比（%）" />
-                <vxe-column field="lendpresent" title="租赁回款（万元）" />
-                <vxe-column field="lendpresent" title="占比（%）" />
+                <vxe-column field="persent" title="占比（%）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
+                <vxe-column field="persent" title="占比（%）" />
               </vxe-colgroup>
               <vxe-colgroup title="三季度目标">
-                <vxe-column field="location" title="租赁面积（㎡）" />
-                <vxe-column field="lendpresent" title="出租率（租赁回款（万元）" />
+                <vxe-column field="place" title="租赁面积（㎡）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
               </vxe-colgroup>
               <vxe-colgroup title="三季度完成情况/占比">
-                <vxe-column field="location" title="占比（%）" />
-                <vxe-column field="lendpresent" title="租赁回款（万元）" />
-                <vxe-column field="lendpresent" title="占比（%）" />
+                <vxe-column field="persent" title="占比（%）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
+                <vxe-column field="persent" title="占比（%）" />
               </vxe-colgroup>
               <vxe-colgroup title="四季度目标">
-                <vxe-column field="location" title="租赁面积（㎡）" />
-                <vxe-column field="lendpresent" title="出租率（租赁回款（万元）" />
+                <vxe-column field="place" title="租赁面积（㎡）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
               </vxe-colgroup>
               <vxe-colgroup title="四季度完成情况/占比">
-                <vxe-column field="location" title="占比（%）" />
-                <vxe-column field="lendpresent" title="租赁回款（万元）" />
-                <vxe-column field="lendpresent" title="占比（%）" />
+                <vxe-column field="persent" title="占比（%）" />
+                <vxe-column field="money" title="租赁回款（万元）" />
+                <vxe-column field="persent" title="占比（%）" />
               </vxe-colgroup>
             </vxe-table>
             <vxe-table
@@ -582,13 +583,13 @@
             >
               <vxe-column type="seq" width="70" />
               <vxe-column field="name" title="项目名称" />
-              <vxe-column field="location" title="可租面积（㎡）" />
+              <vxe-column field="new" title="可租面积（㎡）" />
               <vxe-column field="lendpresent" title="出租率目标（%）" />
               <vxe-column field="outpresent" title="出租面积目标（㎡）" />
               <vxe-colgroup title="2023-03-01 至 2023-03-31 完成情况">
-                <vxe-column field="location" title="累计已出租面积（㎡）" />
+                <vxe-column field="new" title="累计已出租面积（㎡）" />
                 <vxe-column field="lendpresent" title="出租率（%）" />
-                <vxe-column field="lendpresent" title="比较上月净增面积（㎡）" />
+                <vxe-column field="new" title="比较上月净增面积（㎡）" />
               </vxe-colgroup>
               <vxe-column field="new" title="出租面积缺口（㎡）" />
             </vxe-table>
@@ -1015,51 +1016,49 @@
                 height="400"
                 v-if="subject"
                 :show-footer="showFooter"
-                :footer-data="footerData"
-                header-align="center"
                 align="center"
+                :merge-cells="mergeCells"
               >
-                <vxe-column field="seq" width="50" />
                 <vxe-column field="mounth" title="" width="70" />
                 <vxe-colgroup title="项目1">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目2">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目3">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目4">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目5">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目6">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目7">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目8">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目9">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
                 <vxe-colgroup title="项目10">
-                  <vxe-column field="num" title="新增客户" />
-                  <vxe-column field="num" title="来访客户" />
+                  <vxe-column field="num1" title="新增客户" />
+                  <vxe-column field="num1" title="来访客户" />
                 </vxe-colgroup>
               </vxe-table>
               <vxe-table
@@ -1068,39 +1067,39 @@
                 height="300"
                 v-if="room"
                 :show-footer="showFooter"
-                :footer-data="footerData"
                 header-align="center"
                 align="center"
+                :merge-cells="mergeCells1"
               >
                 <vxe-column field="seq" width="50" />
                 <vxe-column field="mounth" title="" width="70" />
                 <vxe-colgroup title="机构推荐">
-                  <vxe-column field="num" title="行业协会" />
-                  <vxe-column field="num" title="中介机构" />
+                  <vxe-column field="num2" title="行业协会" />
+                  <vxe-column field="num2" title="中介机构" />
                 </vxe-colgroup>
                 <vxe-colgroup title="广告宣传">
-                  <vxe-column field="num" title="电梯广告" />
-                  <vxe-column field="num" title="其他广告" />
+                  <vxe-column field="num2" title="电梯广告" />
+                  <vxe-column field="num2" title="其他广告" />
                 </vxe-colgroup>
                 <vxe-colgroup title="网络来电">
-                  <vxe-column field="num" title="58同城平台推送" />
-                  <vxe-column field="num" title="58同城个人发帖" />
+                  <vxe-column field="num2" title="58同城平台推送" />
+                  <vxe-column field="num2" title="58同城个人发帖" />
                 </vxe-colgroup>
                 <vxe-colgroup title="他人推荐">
-                  <vxe-column field="num" title="老业主推荐" />
-                  <vxe-column field="num" title="朋友推荐" />
+                  <vxe-column field="num2" title="老业主推荐" />
+                  <vxe-column field="num2" title="朋友推荐" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自主拓客">
-                  <vxe-column field="num" title="call客" />
-                  <vxe-column field="num" title="陌拜" />
+                  <vxe-column field="num2" title="call客" />
+                  <vxe-column field="num2" title="陌拜" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自然来访">
-                  <vxe-column field="num" title="路过" />
-                  <vxe-column field="num" title="其他" />
+                  <vxe-column field="num2" title="路过" />
+                  <vxe-column field="num2" title="其他" />
                 </vxe-colgroup>
                 <vxe-colgroup title="新媒体推广">
-                  <vxe-column field="num" title="园链" />
-                  <vxe-column field="num" title="抖音" />
+                  <vxe-column field="num2" title="园链" />
+                  <vxe-column field="num2" title="抖音" />
                 </vxe-colgroup>
               </vxe-table>
               <vxe-table
@@ -1109,40 +1108,40 @@
                 height="300"
                 v-if="room"
                 :show-footer="showFooter"
-                :footer-data="footerData"
                 header-align="center"
                 align="center"
                 id="table"
+                :merge-cells="mergeCells1"
               >
                 <vxe-column field="seq" width="50" />
                 <vxe-column field="mounth" title="" width="70" />
                 <vxe-colgroup title="机构推荐">
-                  <vxe-column field="num" title="行业协会" />
-                  <vxe-column field="num" title="中介机构" />
+                  <vxe-column field="num3" title="行业协会" />
+                  <vxe-column field="num3" title="中介机构" />
                 </vxe-colgroup>
                 <vxe-colgroup title="广告宣传">
-                  <vxe-column field="num" title="电梯广告" />
-                  <vxe-column field="num" title="其他广告" />
+                  <vxe-column field="num3" title="电梯广告" />
+                  <vxe-column field="num3" title="其他广告" />
                 </vxe-colgroup>
                 <vxe-colgroup title="网络来电">
-                  <vxe-column field="num" title="58同城平台推送" />
-                  <vxe-column field="num" title="58同城个人发帖" />
+                  <vxe-column field="num3" title="58同城平台推送" />
+                  <vxe-column field="num3" title="58同城个人发帖" />
                 </vxe-colgroup>
                 <vxe-colgroup title="他人推荐">
-                  <vxe-column field="num" title="老业主推荐" />
-                  <vxe-column field="num" title="朋友推荐" />
+                  <vxe-column field="num3" title="老业主推荐" />
+                  <vxe-column field="num3" title="朋友推荐" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自主拓客">
-                  <vxe-column field="num" title="call客" />
-                  <vxe-column field="num" title="陌拜" />
+                  <vxe-column field="num3" title="call客" />
+                  <vxe-column field="num3" title="陌拜" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自然来访">
-                  <vxe-column field="num" title="路过" />
-                  <vxe-column field="num" title="其他" />
+                  <vxe-column field="num3" title="路过" />
+                  <vxe-column field="num3" title="其他" />
                 </vxe-colgroup>
                 <vxe-colgroup title="新媒体推广">
-                  <vxe-column field="num" title="园链" />
-                  <vxe-column field="num" title="抖音" />
+                  <vxe-column field="num3" title="园链" />
+                  <vxe-column field="num3" title="抖音" />
                 </vxe-colgroup>
               </vxe-table>
 
@@ -1152,7 +1151,6 @@
                 height="300"
                 v-if="want"
                 :show-footer="showFooter"
-                :footer-data="footerData"
                 header-align="center"
                 align="center"
                 id="table"
@@ -1171,7 +1169,6 @@
                 height="300"
                 v-if="work"
                 :show-footer="showFooter"
-                :footer-data="footerData"
                 header-align="center"
                 align="center"
                 id="table"
@@ -1194,41 +1191,40 @@
                 class="w-[200vw] mt-[2vw]"
                 height="300"
                 v-if="way"
-                :show-footer="showFooter"
-                :footer-data="footerData"
+                show-footer
                 header-align="center"
                 align="center"
                 id="table"
+                :merge-cells="mergeCells2"
               >
-                <vxe-column field="seq" width="50" />
                 <vxe-column field="mounth" title="" width="70" />
                 <vxe-colgroup title="机构推荐">
-                  <vxe-column field="num" title="行业协会" />
-                  <vxe-column field="num" title="中介机构" />
+                  <vxe-column field="num4" title="行业协会" />
+                  <vxe-column field="num4" title="中介机构" />
                 </vxe-colgroup>
                 <vxe-colgroup title="广告宣传">
-                  <vxe-column field="num" title="电梯广告" />
-                  <vxe-column field="num" title="其他广告" />
+                  <vxe-column field="num4" title="电梯广告" />
+                  <vxe-column field="num4" title="其他广告" />
                 </vxe-colgroup>
                 <vxe-colgroup title="网络来电">
-                  <vxe-column field="num" title="58同城平台推送" />
-                  <vxe-column field="num" title="58同城个人发帖" />
+                  <vxe-column field="num4" title="58同城平台推送" />
+                  <vxe-column field="num4" title="58同城个人发帖" />
                 </vxe-colgroup>
                 <vxe-colgroup title="他人推荐">
-                  <vxe-column field="num" title="老业主推荐" />
-                  <vxe-column field="num" title="朋友推荐" />
+                  <vxe-column field="num4" title="老业主推荐" />
+                  <vxe-column field="num4" title="朋友推荐" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自主拓客">
-                  <vxe-column field="num" title="call客" />
-                  <vxe-column field="num" title="陌拜" />
+                  <vxe-column field="num4" title="call客" />
+                  <vxe-column field="num4" title="陌拜" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自然来访">
-                  <vxe-column field="num" title="路过" />
-                  <vxe-column field="num" title="其他" />
+                  <vxe-column field="num4" title="路过" />
+                  <vxe-column field="num4" title="其他" />
                 </vxe-colgroup>
                 <vxe-colgroup title="新媒体推广">
-                  <vxe-column field="num" title="园链" />
-                  <vxe-column field="num" title="抖音" />
+                  <vxe-column field="num4" title="园链" />
+                  <vxe-column field="num4" title="抖音" />
                 </vxe-colgroup>
               </vxe-table>
               <vxe-table
@@ -1270,35 +1266,36 @@
                 header-align="center"
                 align="center"
                 id="table"
+                :merge-cells="mergeCells2"
               >
-                <vxe-column field="name" title="项目" width="70" />
+                <vxe-column field="rename" title="项目" width="70" />
                 <vxe-colgroup title="机构推荐">
-                  <vxe-column field="num" title="行业协会" />
-                  <vxe-column field="num" title="中介机构" />
+                  <vxe-column field="num4" title="行业协会" />
+                  <vxe-column field="num4" title="中介机构" />
                 </vxe-colgroup>
                 <vxe-colgroup title="广告宣传">
-                  <vxe-column field="num" title="电梯广告" />
-                  <vxe-column field="num" title="其他广告" />
+                  <vxe-column field="num4" title="电梯广告" />
+                  <vxe-column field="num4" title="其他广告" />
                 </vxe-colgroup>
                 <vxe-colgroup title="网络来电">
-                  <vxe-column field="num" title="58同城平台推送" />
-                  <vxe-column field="num" title="58同城个人发帖" />
+                  <vxe-column field="num4" title="58同城平台推送" />
+                  <vxe-column field="num4" title="58同城个人发帖" />
                 </vxe-colgroup>
                 <vxe-colgroup title="他人推荐">
-                  <vxe-column field="num" title="老业主推荐" />
-                  <vxe-column field="num" title="朋友推荐" />
+                  <vxe-column field="num4" title="老业主推荐" />
+                  <vxe-column field="num4" title="朋友推荐" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自主拓客">
-                  <vxe-column field="num" title="call客" />
-                  <vxe-column field="num" title="陌拜" />
+                  <vxe-column field="num4" title="call客" />
+                  <vxe-column field="num4" title="陌拜" />
                 </vxe-colgroup>
                 <vxe-colgroup title="自然来访">
-                  <vxe-column field="num" title="路过" />
-                  <vxe-column field="num" title="其他" />
+                  <vxe-column field="num4" title="路过" />
+                  <vxe-column field="num4" title="其他" />
                 </vxe-colgroup>
                 <vxe-colgroup title="新媒体推广">
-                  <vxe-column field="num" title="园链" />
-                  <vxe-column field="num" title="抖音" />
+                  <vxe-column field="num4" title="园链" />
+                  <vxe-column field="num4" title="抖音" />
                 </vxe-colgroup>
               </vxe-table>
             </div>
@@ -1309,12 +1306,121 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
   import { ref, reactive } from 'vue';
   import { VueUiDonut, VueUiXy } from 'vue-data-ui';
   import 'vue-data-ui/style.css';
   import { VxeUI } from 'vxe-pc-ui';
   import XEUtils from 'xe-utils';
+  import type { SexType } from '@faker-js/faker';
+  import { faker } from '@faker-js/faker';
+  import { fakerZH_TW } from '@faker-js/faker';
+  import axios from 'axios';
+  fakerZH_TW.seed(5);
+  const tableData = ref(['']);
+  const searchlocation = ref('');
+  const searchnumber = ref('');
+  const searchfuter = ref('');
+  const searchpast = ref('');
+  const searchobjname = ref('');
+  const searchpersent = ref('');
+  const searchplace = ref('');
+  const searchclassify = ref('');
+  const searchnum = ref('');
+  const searchname = ref('');
+  const searchmoney = ref('');
+  const searchstatus = ref('');
+  const searchsymbol = ref('');
+  const mergeCells = ref([{ row: 3, col: 1, rowspan: 1, colspan: 20 }]);
+  const mergeCells1 = ref([{ row: 3, col: 2, rowspan: 1, colspan: 14 }]);
+  const mergeCells2 = ref([
+    { row: 3, col: 1, rowspan: 1, colspan: 2 },
+    { row: 3, col: 3, rowspan: 1, colspan: 2 },
+    { row: 3, col: 5, rowspan: 1, colspan: 2 },
+    { row: 3, col: 7, rowspan: 1, colspan: 2 },
+    { row: 3, col: 9, rowspan: 1, colspan: 2 },
+    { row: 3, col: 11, rowspan: 1, colspan: 2 },
+    { row: 3, col: 13, rowspan: 1, colspan: 2 },
+  ]);
+
+  const fetchTableData = async () => {
+    try {
+      const parmas = {
+        location: searchlocation.value,
+        number: searchnumber.value,
+        futer: searchfuter.value,
+        past: searchpast.value,
+        objname: searchobjname.value,
+        persent: searchpersent.value,
+        place: searchplace.value,
+        classify: searchclassify.value,
+        num: searchnum.value,
+        name: searchname.value,
+        money: searchmoney.value,
+        status: searchstatus.value,
+        symbol: searchsymbol.value,
+      };
+      const response = await axios.get(
+        'https://apifoxmock.com/m1/5416381-5090472-default/data-analysis',
+        parmas,
+      );
+      const responseData = response.data;
+      console.log(responseData);
+
+      if (Array.isArray(responseData)) {
+        // 数据已经是对象数组，直接赋值
+        tableData.value = responseData;
+      } else if (typeof responseData === 'object' && responseData !== null) {
+        // 将单个对象转换为对象数组
+        tableData.value = [responseData];
+      } else {
+        console.error('Unexpected data format:', responseData);
+      }
+    } catch (error) {
+      console.error('Failed to fetch table data:', error);
+    }
+  };
+
+  fetchTableData();
+
+  const firstName = fakerZH_TW.person.firstName();
+  const firstName1 = fakerZH_TW.person.firstName();
+  const firstName2 = fakerZH_TW.person.firstName();
+  const firstName3 = fakerZH_TW.person.firstName();
+  const firstName4 = fakerZH_TW.person.firstName();
+  const firstName5 = fakerZH_TW.person.firstName();
+
+  const headerCellClassName = ({ column }) => {
+    if (column.field === '年度任务') {
+      return 'col-yellow';
+    }
+  };
+
+  type SubscriptionTier = 'free' | 'basic' | 'business';
+
+  interface User {
+    _id: string;
+    avatar: string;
+    birthday: Date;
+    email: string;
+    lastName: string;
+    sex: SexType;
+    subscriptionTier: SubscriptionTier;
+  }
+  function createRandomUser(): User {
+    return {
+      _id: faker.string.uuid(),
+      avatar: faker.image.avatar(),
+      birthday: faker.date.birthdate(),
+      email: faker.internet.email(),
+      lastName: faker.person.lastName(),
+      sex: faker.person.sexType(),
+      subscriptionTier: faker.helpers.arrayElement(['free', 'basic', 'business']),
+    };
+  }
+
+  const user = createRandomUser();
+  console.log(user);
 
   const aboutmoney = ref(false);
   const aboutlend = ref(false);
@@ -1613,62 +1719,15 @@
       address: 'Guangzhou',
     },
   ];
-  const tableData = ref([
-    {
-      id: 10001,
-      name: '项目1',
-      role: 'Develop',
-      sex: 'Man',
-      age: 28,
-      address: 'test abc',
-    },
-    {
-      id: 10002,
-      name: '项目2',
-      role: 'Test',
-      sex: 'Women',
-      age: 22,
-      address: 'Guangzhou',
-    },
-    {
-      id: 10003,
-      name: '项目3',
-      role: 'PM',
-      sex: 'Man',
-      age: 32,
-      address: 'Shanghai',
-    },
-    {
-      id: 10004,
-      name: '项目4',
-      role: 'Designer',
-      sex: 'Women',
-      age: 24,
-      address: 'Shanghai',
-    },
-    {
-      id: 10005,
-      name: '项目5',
-      role: 'Designer',
-      sex: 'Women',
-      age: 24,
-      address: 'Shanghai',
-    },
-    {
-      id: 10006,
-      name: '项目6',
-      role: 'Designer',
-      sex: 'Women',
-      age: 24,
-      address: 'Shanghai',
-    },
-  ]);
   const tableData1 = ref([
     {
       id: 10001,
-      name: '项目1',
+      objname: '项目1',
+      name: firstName,
       role: 'Develop',
+      num: randomInt,
       sex: 'Man',
+      time: user.birthday,
       age: 28,
       address: 'test abc',
       div: '此处三个字段为手动填写',
@@ -1677,9 +1736,12 @@
     },
     {
       id: 10002,
-      name: '项目2',
+      objname: '项目2',
+      name: firstName1,
       role: 'Test',
+      num: randomInt,
       sex: 'Women',
+      time: user.birthday,
       age: 22,
       address: 'Guangzhou',
       div: '此处三个字段为手动填写',
@@ -1688,9 +1750,12 @@
     },
     {
       id: 10003,
-      name: '项目3',
+      objname: '项目3',
+      name: firstName2,
+      num: randomInt,
       role: 'PM',
       sex: 'Man',
+      time: user.birthday,
       age: 32,
       address: 'Shanghai',
       div: '此处三个字段为手动填写',
@@ -1699,8 +1764,11 @@
     },
     {
       id: 10004,
-      name: '项目4',
+      objname: '项目4',
+      name: firstName3,
+      num: randomInt,
       role: 'Designer',
+      time: user.birthday,
       sex: 'Women',
       age: 24,
       address: 'Shanghai',
@@ -1710,8 +1778,11 @@
     },
     {
       id: 10005,
-      name: '项目5',
+      objname: '项目5',
+      name: firstName4,
       role: 'Designer',
+      time: user.birthday,
+      num: randomInt,
       sex: 'Women',
       age: 24,
       address: 'Shanghai',
@@ -1721,8 +1792,11 @@
     },
     {
       id: 10006,
-      name: '项目6',
+      objname: '项目6',
+      name: firstName5,
       role: 'Designer',
+      num: randomInt,
+      time: user.birthday,
       sex: 'Women',
       age: 24,
       address: 'Shanghai',
@@ -1734,66 +1808,66 @@
   const tableData2 = ref([
     {
       id: 10001,
-      name: '项目1',
+      name: firstName,
       mounth: '一月',
       location: '湖北省武汉市xxx区xxxxxx',
-      lendpresent: 'xx.xx%（已出租面积÷项目所有房间累计的可租面积）',
-      outpresent: 'xx.xx%（退租完成面积÷项目所有房间累计的可租面积）',
-      new: '15000㎡（筛选时间段内的审核通过新签房间面积）',
-      still: '1500㎡（筛选时间段内的审核通过续签房间面积）',
-      out: '1500㎡（筛选时间段内的审核通过退租房间面积）',
+      lendpresent: randomInt + '%（已出租面积÷项目所有房间累计的可租面积）',
+      outpresent: randomInt + '%（退租完成面积÷项目所有房间累计的可租面积）',
+      new: randomInt + '㎡（筛选时间段内的审核通过新签房间面积）',
+      still: randomInt + '㎡（筛选时间段内的审核通过续签房间面积）',
+      out: randomInt + '㎡（筛选时间段内的审核通过退租房间面积）',
     },
     {
       id: 10002,
-      name: '项目2',
+      name: firstName1,
       mounth: '二月',
       location: '湖北省武汉市xxx区xxxxxx',
-      lendpresent: 'xx.xx%（已出租面积÷项目所有房间累计的可租面积）',
-      outpresent: 'xx.xx%（退租完成面积÷项目所有房间累计的可租面积）',
-      new: '15000㎡（筛选时间段内的审核通过新签房间面积）',
-      still: '1500㎡（筛选时间段内的审核通过续签房间面积）',
-      out: '1500㎡（筛选时间段内的审核通过退租房间面积）',
+      lendpresent: randomInt + '%（已出租面积÷项目所有房间累计的可租面积）',
+      outpresent: randomInt + '%（退租完成面积÷项目所有房间累计的可租面积）',
+      new: randomInt + '㎡（筛选时间段内的审核通过新签房间面积）',
+      still: randomInt + '㎡（筛选时间段内的审核通过续签房间面积）',
+      out: randomInt + '㎡（筛选时间段内的审核通过退租房间面积）',
     },
     {
       id: 10003,
-      name: '项目3',
+      name: firstName2,
       mounth: '三月',
       location: '湖北省武汉市xxx区xxxxxx',
-      lendpresent: 'xx.xx%（已出租面积÷项目所有房间累计的可租面积）',
-      outpresent: 'xx.xx%（退租完成面积÷项目所有房间累计的可租面积）',
-      new: '15000㎡（筛选时间段内的审核通过新签房间面积）',
-      still: '1500㎡（筛选时间段内的审核通过续签房间面积）',
-      out: '1500㎡（筛选时间段内的审核通过退租房间面积）',
+      lendpresent: randomInt + '%（已出租面积÷项目所有房间累计的可租面积）',
+      outpresent: randomInt + '%（退租完成面积÷项目所有房间累计的可租面积）',
+      new: randomInt + '㎡（筛选时间段内的审核通过新签房间面积）',
+      still: randomInt + '㎡（筛选时间段内的审核通过续签房间面积）',
+      out: randomInt + '㎡（筛选时间段内的审核通过退租房间面积）',
     },
     {
       id: 10004,
-      name: '项目4',
+      name: firstName3,
       location: '湖北省武汉市xxx区xxxxxx',
-      lendpresent: 'xx.xx%（已出租面积÷项目所有房间累计的可租面积）',
-      outpresent: 'xx.xx%（退租完成面积÷项目所有房间累计的可租面积）',
-      new: '15000㎡（筛选时间段内的审核通过新签房间面积）',
-      still: '1500㎡（筛选时间段内的审核通过续签房间面积）',
-      out: '1500㎡（筛选时间段内的审核通过退租房间面积）',
+      lendpresent: randomInt + '%（已出租面积÷项目所有房间累计的可租面积）',
+      outpresent: randomInt + '%（退租完成面积÷项目所有房间累计的可租面积）',
+      new: randomInt + '㎡（筛选时间段内的审核通过新签房间面积）',
+      still: randomInt + '㎡（筛选时间段内的审核通过续签房间面积）',
+      out: randomInt + '㎡（筛选时间段内的审核通过退租房间面积）',
     },
     {
       id: 10005,
-      name: '项目5',
+      name: firstName4,
       location: '湖北省武汉市xxx区xxxxxx',
-      lendpresent: 'xx.xx%（已出租面积÷项目所有房间累计的可租面积）',
-      outpresent: 'xx.xx%（退租完成面积÷项目所有房间累计的可租面积）',
-      new: '15000㎡（筛选时间段内的审核通过新签房间面积）',
-      still: '1500㎡（筛选时间段内的审核通过续签房间面积）',
-      out: '1500㎡（筛选时间段内的审核通过退租房间面积）',
+      lendpresent: randomInt + '%（已出租面积÷项目所有房间累计的可租面积）',
+      outpresent: randomInt + '%（退租完成面积÷项目所有房间累计的可租面积）',
+      new: randomInt + '㎡（筛选时间段内的审核通过新签房间面积）',
+      still: randomInt + '㎡（筛选时间段内的审核通过续签房间面积）',
+      out: randomInt + '㎡（筛选时间段内的审核通过退租房间面积）',
     },
     {
       id: 10006,
-      name: '项目6',
+      name: firstName5,
       location: '湖北省武汉市xxx区xxxxxx',
-      lendpresent: 'xx.xx%（已出租面积÷项目所有房间累计的可租面积）',
-      outpresent: 'xx.xx%（退租完成面积÷项目所有房间累计的可租面积）',
-      new: '15000㎡（筛选时间段内的审核通过新签房间面积）',
-      still: '1500㎡（筛选时间段内的审核通过续签房间面积）',
-      out: '1500㎡（筛选时间段内的审核通过退租房间面积）',
+      lendpresent: randomInt + '%（已出租面积÷项目所有房间累计的可租面积）',
+      outpresent: randomInt + '%（退租完成面积÷项目所有房间累计的可租面积）',
+      new: randomInt + '㎡（筛选时间段内的审核通过新签房间面积）',
+      still: randomInt + '㎡（筛选时间段内的审核通过续签房间面积）',
+      out: randomInt + '㎡（筛选时间段内的审核通过退租房间面积）',
     },
   ]);
   const tableData3 = ref([
@@ -1801,24 +1875,47 @@
       id: 10001,
       name: '项目1',
       num: randomInt,
+      num1: randomInt,
+      num2: randomInt,
+      num3: randomInt,
+      num4: randomInt,
       mounth: '一月',
+      rename: '项目1',
     },
     {
       id: 10002,
       name: '项目2',
       mounth: '二月',
       num: randomInt,
+      num1: randomInt,
+      num2: randomInt,
+      num3: randomInt,
+      num4: randomInt,
+      rename: '项目2',
     },
     {
       id: 10003,
       name: '项目3',
       mounth: '三月',
       num: randomInt,
+      num1: randomInt,
+      num2: randomInt,
+      num3: randomInt,
+      num4: randomInt,
+      rename: '项目3',
+    },
+    {
+      id: 10004,
+      name: '项目4',
+      mounth: '总计',
+      num: randomInt * 3,
+      num1: '新增客户:' + randomInt * 3 * 10 + '人' + ',' + '来访客户:' + randomInt * 3 * 10 + '人',
+      num2: '新增客户:' + randomInt * 3 * 14 + '人',
+      num3: '来访客户:' + randomInt * 3 * 14 + '人',
+      num4: randomInt * 3 * 2,
+      rename: '总计',
     },
   ]);
-  const nameEditRender = reactive({
-    name: 'VxeInput',
-  });
 
   const defaultData = {
     id: null,
@@ -1990,7 +2087,6 @@
     Moneymsg.value = true;
     table.value = false;
   }
-  const footerData = ref([{ seq: '总计', num: '新增客户：' }]);
 
   const config = ref({
     responsive: false,
@@ -2205,7 +2301,7 @@
   ]);
   const config1 = ref({
     responsive: false,
-    theme: '',
+    theme: undefined,
     customPalette: [],
     useCssAnimation: true,
     useBlurOnHover: true,
@@ -2415,7 +2511,7 @@
     },
   ]);
   const config2 = ref({
-    theme: '',
+    theme: undefined,
     responsive: false,
     customPalette: [],
     useCssAnimation: true,
@@ -2743,7 +2839,7 @@
     },
   ]);
   const config3 = ref({
-    theme: '',
+    theme: undefined,
     responsive: false,
     customPalette: [],
     useCssAnimation: true,
