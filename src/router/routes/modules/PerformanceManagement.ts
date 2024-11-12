@@ -17,7 +17,7 @@ const dashboard: AppRouteModule = {
     {
       path: 'commission',
       name: 'Commission',
-      component: () => import('/@/views/PerformanceManagement/Commission/detailedPage/index.vue'),
+      component: () => import('/@/views/PerformanceManagement/index.vue'),
       meta: {
         title: '业绩台账',
       },
